@@ -17,4 +17,4 @@ data class Notes(
 
     @ColumnInfo(name = "icerik")
     var icerik: String,
-) : Parcelable{}
+) : Parcelable {}

@@ -11,10 +11,8 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun NoteDao(): NoteDao
 
     companion object {
-
         @Volatile
         private var INSTANCE: AppDatabase? = null
-
         fun getDatabase(context: Context): AppDatabase {
             val tempInstance = INSTANCE
             if (tempInstance != null) {

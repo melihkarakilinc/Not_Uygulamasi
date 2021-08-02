@@ -15,11 +15,9 @@ import kotlinx.android.synthetic.main.fragment_insert_note.*
 import kotlinx.android.synthetic.main.fragment_insert_note.view.*
 
 class InsertNoteFragment : Fragment() {
-
     private val noteViewModel: NoteViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -52,8 +50,7 @@ class InsertNoteFragment : Fragment() {
                 ).show()
             }
             findNavController().navigate(R.id.action_insertNoteFragment_to_allNotesFragment)
-        }
-        else{
+        } else {
             view?.let {
                 Snackbar.make(
                     it, // Parent view
@@ -62,7 +59,6 @@ class InsertNoteFragment : Fragment() {
                 ).show()
             }
         }
-
     }
 
     private fun verifyData(title: String, description: String): Boolean {

@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.melihkarakilinc.notuygulamasi.R
 import com.melihkarakilinc.notuygulamasi.model.Notes
 import com.melihkarakilinc.notuygulamasi.view.AllNotesFragmentDirections
-import kotlinx.android.synthetic.main.fragment_all_notes.view.*
 import kotlinx.android.synthetic.main.note_item.view.*
 import java.util.*
 

@@ -7,7 +7,7 @@ import androidx.room.*
 interface NoteDao {
 
     @Query("SELECT*FROM note_table ORDER BY id DESC")
-    fun getAllData():LiveData<List<Notes>>
+    fun getAllData(): LiveData<List<Notes>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertData(exampleData: Notes)

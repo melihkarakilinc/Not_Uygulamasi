@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.melihkarakilinc.notuygulamasi.R
 import com.melihkarakilinc.notuygulamasi.ViewModel.NoteViewModel
@@ -17,12 +16,10 @@ import kotlinx.android.synthetic.main.fragment_all_notes.*
 import kotlinx.android.synthetic.main.fragment_all_notes.view.*
 
 class AllNotesFragment : Fragment() {
-
     private val noteViewModel: NoteViewModel by viewModels()
     private val adapter: NoteAdapter by lazy { NoteAdapter() }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -34,18 +31,16 @@ class AllNotesFragment : Fragment() {
 
         val recyclerView = view.recyclerView
         recyclerView.adapter = adapter
-
-        recyclerView.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
+        recyclerView.layoutManager =
+            StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
 
         noteViewModel.getAllData.observe(viewLifecycleOwner, Observer { data ->
-            if (data.isNotEmpty()){
+            if (data.isNotEmpty()) {
                 card_uyari.visibility = View.GONE
-                recyclerView.visibility=View.VISIBLE
+                recyclerView.visibility = View.VISIBLE
                 adapter.setData(data)
-
-            }
-            else{
-                recyclerView.visibility=View.GONE
+            } else {
+                recyclerView.visibility = View.GONE
                 card_uyari.visibility = View.VISIBLE
             }
 
@@ -53,7 +48,6 @@ class AllNotesFragment : Fragment() {
         view.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_allNotesFragment_to_insertNoteFragment)
         }
-
         return view
     }
 }
