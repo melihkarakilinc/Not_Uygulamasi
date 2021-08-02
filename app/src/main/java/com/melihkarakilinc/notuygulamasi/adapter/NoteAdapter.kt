@@ -4,9 +4,12 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.melihkarakilinc.notuygulamasi.R
 import com.melihkarakilinc.notuygulamasi.model.Notes
+import com.melihkarakilinc.notuygulamasi.view.AllNotesFragmentDirections
+import kotlinx.android.synthetic.main.fragment_all_notes.view.*
 import kotlinx.android.synthetic.main.note_item.view.*
 import java.util.*
 
@@ -34,6 +37,11 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.MyViewHolder>() {
                 random.nextInt(256), random.nextInt(256)
             )
         holder.itemView.viewColor.setBackgroundColor(color)
+        holder.itemView.item_card.setOnClickListener {
+            val direction = AllNotesFragmentDirections
+                .actionAllNotesFragmentToUpdateNoteFragment(dataList[position])
+            holder.itemView.findNavController().navigate(direction)
+        }
     }
 
     override fun getItemCount(): Int {

@@ -1,10 +1,7 @@
 package com.melihkarakilinc.notuygulamasi.model
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface NoteDao {
@@ -14,4 +11,7 @@ interface NoteDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertData(exampleData: Notes)
+
+    @Update
+    suspend fun updateData(note: Notes)
 }
