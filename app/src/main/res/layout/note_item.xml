@@ -2,10 +2,12 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:padding="16dp"
+    app:cardBackgroundColor="#e9edc9"
     app:cardCornerRadius="5dp"
     app:cardElevation="8dp">
 
@@ -36,8 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Description"
-            android:maxHeight="170dp"/>
+            android:maxHeight="170dp"
+            android:text="Description" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleOwner
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.melihkarakilinc.notuygulamasi.R
 import com.melihkarakilinc.notuygulamasi.ViewModel.NoteViewModel
 import com.melihkarakilinc.notuygulamasi.model.Notes
@@ -45,15 +48,29 @@ class InsertNoteFragment : Fragment() {
                 description
             )
             noteViewModel.insertData(newData)
-            Toast.makeText(requireContext(), "Succesfully added", Toast.LENGTH_SHORT).show()
+            view?.let {
+                Snackbar.make(
+                    it,
+                    "Ekleme Başarılı!",
+                    Snackbar.LENGTH_SHORT
+                ).show()
+            }
             findNavController().navigate(R.id.action_insertNoteFragment_to_allNotesFragment)
+        }
+        else{
+            view?.let {
+                Snackbar.make(
+                    it, // Parent view
+                    "Lütfen Alanları Boş Bırakmayınız!", // Message to show
+                    Snackbar.LENGTH_SHORT // How long to display the message.
+                ).show()
+            }
         }
 
     }
 
     private fun verifyData(title: String, description: String): Boolean {
         return !(title.isEmpty() || description.isEmpty())
-
     }
 
 }

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.melihkarakilinc.notuygulamasi.R
 import com.melihkarakilinc.notuygulamasi.ViewModel.NoteViewModel
 import com.melihkarakilinc.notuygulamasi.adapter.NoteAdapter
+import kotlinx.android.synthetic.main.fragment_all_notes.*
 import kotlinx.android.synthetic.main.fragment_all_notes.view.*
 
 class AllNotesFragment : Fragment() {
@@ -33,19 +34,21 @@ class AllNotesFragment : Fragment() {
 
         val recyclerView = view.recyclerView
         recyclerView.adapter = adapter
-        //recyclerView.layoutManager = LinearLayoutManager(requireActivity())
 
         recyclerView.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
 
-/*        binding.recyclerView.apply {
-            layoutManager = StaggeredGridLayoutManager(
-                2,
-                StaggeredGridLayoutManager.VERTICAL
-            )
-            setHasFixedSize(true)*/
-
         noteViewModel.getAllData.observe(viewLifecycleOwner, Observer { data ->
-            adapter.setData(data)
+            if (data.isNotEmpty()){
+                card_uyari.visibility = View.GONE
+                recyclerView.visibility=View.VISIBLE
+                adapter.setData(data)
+
+            }
+            else{
+                recyclerView.visibility=View.GONE
+                card_uyari.visibility = View.VISIBLE
+            }
+
         })
         view.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_allNotesFragment_to_insertNoteFragment)
