@@ -10,6 +10,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
 import com.melihkarakilinc.notuygulamasi.R
+import com.melihkarakilinc.notuygulamasi.SnackBarHelper
 import com.melihkarakilinc.notuygulamasi.ViewModel.NoteViewModel
 import com.melihkarakilinc.notuygulamasi.model.Notes
 import kotlinx.android.synthetic.main.fragment_update_note.*
@@ -39,7 +40,6 @@ class UpdateNoteFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_update_note, container, false)
     }
 
@@ -49,23 +49,10 @@ class UpdateNoteFragment : Fragment() {
 
         if (title.isNotEmpty()) {
             val note = Notes(currentNote.id, title, body)
-            noteViewModel.updateData(note)
-            view?.let {
-                Snackbar.make(
-                    it,
-                    "Güncelleme Başarılı!",
-                    Snackbar.LENGTH_SHORT
-                ).show()
-            }
-            view.findNavController().navigate(R.id.action_updateNoteFragment_to_allNotesFragment)
+            noteViewModel.updateData(note,view)
+            SnackBarHelper(view,"Gücelleme Başarılı!")
         } else {
-            view?.let {
-                Snackbar.make(
-                    it,
-                    "Lütfen Alanları Doldurunuz!",
-                    Snackbar.LENGTH_SHORT
-                ).show()
-            }
+            SnackBarHelper(view,"Lütfen Alanları Doldurunuz!")
         }
     }
 }

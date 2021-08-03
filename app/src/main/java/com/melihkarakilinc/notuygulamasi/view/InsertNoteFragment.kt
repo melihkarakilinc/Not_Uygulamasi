@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.melihkarakilinc.notuygulamasi.R
+import com.melihkarakilinc.notuygulamasi.SnackBarHelper
 import com.melihkarakilinc.notuygulamasi.ViewModel.NoteViewModel
 import com.melihkarakilinc.notuygulamasi.model.Notes
 import kotlinx.android.synthetic.main.fragment_insert_note.*
@@ -27,12 +28,12 @@ class InsertNoteFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_insert_note, container, false)
         view.add.setOnClickListener {
-            insertNote()
+            insertNote(view)
         }
         return view
     }
 
-    private fun insertNote() {
+    private fun insertNote(view: View) {
         val title = title_et.text.toString()
         val description = description_et.text.toString()
         if (verifyData(title, description)) {
@@ -41,23 +42,9 @@ class InsertNoteFragment : Fragment() {
                 title,
                 description
             )
-            noteViewModel.insertData(newData)
-            view?.let {
-                Snackbar.make(
-                    it,
-                    "Ekleme Başarılı!",
-                    Snackbar.LENGTH_SHORT
-                ).show()
-            }
-            findNavController().navigate(R.id.action_insertNoteFragment_to_allNotesFragment)
+            noteViewModel.insertData(newData,view)
         } else {
-            view?.let {
-                Snackbar.make(
-                    it, // Parent view
-                    "Lütfen Alanları Boş Bırakmayınız!", // Message to show
-                    Snackbar.LENGTH_SHORT // How long to display the message.
-                ).show()
-            }
+            SnackBarHelper(view,"Lütfen Alanları Boş Bırakmayınız!")
         }
     }
 
