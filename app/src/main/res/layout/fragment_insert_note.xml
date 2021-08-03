@@ -29,12 +29,13 @@
                 android:layout_margin="8dp"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:hint="Başlık"
+                android:hint="@string/baslik"
                 android:inputType="text"
                 android:padding="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textDirection="locale"/>
 
             <EditText
                 android:id="@+id/description_et"
@@ -44,13 +45,14 @@
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:gravity="start|top"
-                android:hint="İçerik"
+                android:hint="@string/icerik"
                 android:inputType="textMultiLine"
                 android:padding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title_et" />
+                app:layout_constraintTop_toBottomOf="@+id/title_et"
+                android:textDirection="locale"/>
 
             <Button
                 android:id="@+id/add"
@@ -58,9 +60,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="30dp"
-                android:text="EKLE"
+                android:text="@string/ekle"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textDirection="locale"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

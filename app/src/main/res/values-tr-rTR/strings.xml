@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Not Uygulaması</string>
+    <string name="bos_alan">Lütfen Alanları Boş Bırakmayınız!</string>
+    <string name="ekleme_basarili">Ekleme Başarılı!</string>
+    <string name="silme_basarili">Silme Başarılı!</string>
+    <string name="not_bulunmamakta">Not Yok</string>
+    <string name="baslik">Başlık</string>
+    <string name="icerik">İçerik</string>
+    <string name="ekle">EKLE</string>
+    <string name="sil">SİL</string>
+    <string name="guncelle">Güncelle</string>
+</resources>

@@ -27,10 +27,10 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun insertData(notes: Notes,view: View) {
-        viewModelScope.launch(Dispatchers.IO) {
+        val launch = viewModelScope.launch(Dispatchers.IO) {
             repository.insertData(notes)
         }
-        SnackBarHelper(view,"Ekleme Başarılı!")
+        SnackBarHelper(view,view.context.getString(R.string.ekleme_basarili))
         view.findNavController().navigate(R.id.action_insertNoteFragment_to_allNotesFragment)
     }
 
@@ -38,7 +38,7 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.updateData(notes)
         }
-        SnackBarHelper(view,"Güncelleme Başarılı")
+        SnackBarHelper(view,"Update Successful!")
         view.findNavController().navigate(R.id.action_updateNoteFragment_to_allNotesFragment)
     }
 
@@ -46,7 +46,7 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteData(notes)
         }
-        SnackBarHelper(view,"Silme İşlemi Başarılı")
+        SnackBarHelper(view,view.context.getString(R.string.silme_basarili))
         view.findNavController().navigate(R.id.action_updateNoteFragment_to_allNotesFragment)
     }
 }

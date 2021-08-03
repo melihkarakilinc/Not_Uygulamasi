@@ -1,4 +1,13 @@
 <resources>
-    <string name="app_name">Not Uygulamasi</string>
+    <string name="app_name">Note App</string>
+    <string name="bos_alan">Please do not leave the fields blank!</string>
+    <string name="ekleme_basarili">Add Successful!</string>
+    <string name="silme_basarili">Deletion Successful!</string>
+    <string name="not_bulunmamakta">No Note</string>
+    <string name="baslik">Title</string>
+    <string name="icerik">Contents</string>
+    <string name="ekle">ADD</string>
+    <string name="sil">DELETE</string>
+    <string name="guncelle">Update</string>
 
 </resources>

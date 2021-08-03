@@ -53,7 +53,7 @@ class UpdateNoteFragment : Fragment() {
             val note = Notes(currentNote.id, title, body)
             noteViewModel.updateData(note,view)
         } else {
-            SnackBarHelper(view,"Lütfen Alanları Doldurunuz!")
+            SnackBarHelper(view,getString(R.string.bos_alan))
         }
     }
 

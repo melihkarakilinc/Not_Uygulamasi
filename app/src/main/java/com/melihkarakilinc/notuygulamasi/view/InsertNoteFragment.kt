@@ -42,7 +42,7 @@ class InsertNoteFragment : Fragment() {
             )
             noteViewModel.insertData(newData,view)
         } else {
-            SnackBarHelper(view,"Lütfen Alanları Boş Bırakmayınız!")
+            SnackBarHelper(view,getString(R.string.bos_alan))
         }
     }
 

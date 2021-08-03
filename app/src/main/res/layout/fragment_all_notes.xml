@@ -25,8 +25,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Not Bulunmamakta"
-            android:textSize="24sp" />
+            android:text="@string/not_bulunmamakta"
+            android:textSize="24sp"
+            android:textDirection="locale"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView

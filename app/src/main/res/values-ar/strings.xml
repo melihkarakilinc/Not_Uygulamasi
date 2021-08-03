@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ملاحظة التطبيق</string>
+    <string name="bos_alan">من فضلك لا تترك الحقول فارغة!</string>
+    <string name="ekleme_basarili">تم الإضافة بنجاح!</string>
+    <string name="silme_basarili">تم الحذف بنجاح!</string>
+    <string name="not_bulunmamakta">لا ملاحظة</string>
+    <string name="baslik">لقب</string>
+    <string name="icerik">محتويات</string>
+    <string name="ekle">يضيف</string>
+    <string name="sil">حذف</string>
+    <string name="guncelle">تحديث</string>
+</resources>
