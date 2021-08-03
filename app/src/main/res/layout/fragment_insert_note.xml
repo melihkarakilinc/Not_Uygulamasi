@@ -20,7 +20,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/border">
 
             <EditText
                 android:id="@+id/title_et"
@@ -63,6 +64,7 @@
                 android:text="@string/ekle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="#e76f51"
                 android:textDirection="locale"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

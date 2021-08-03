@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fefae0"
     tools:context=".view.UpdateNoteFragment">
 
     <androidx.cardview.widget.CardView
@@ -19,7 +20,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/border">
 
             <EditText
                 android:id="@+id/title_et_update"
@@ -64,6 +66,7 @@
                 android:text="@string/guncelle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="#e76f51"
                 android:textDirection="locale"/>
 
             <Button
@@ -75,6 +78,7 @@
                 android:text="@string/sil"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:backgroundTint="#e76f51"
                 android:textDirection="locale"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
