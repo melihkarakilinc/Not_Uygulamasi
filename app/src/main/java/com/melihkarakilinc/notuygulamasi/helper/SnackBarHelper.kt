@@ -1,4 +1,4 @@
-package com.melihkarakilinc.notuygulamasi
+package com.melihkarakilinc.notuygulamasi.helper
 
 import android.view.View
 import com.google.android.material.snackbar.Snackbar

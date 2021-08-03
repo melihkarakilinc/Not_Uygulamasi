@@ -6,11 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
-import com.google.android.material.snackbar.Snackbar
 import com.melihkarakilinc.notuygulamasi.R
-import com.melihkarakilinc.notuygulamasi.SnackBarHelper
+import com.melihkarakilinc.notuygulamasi.helper.SnackBarHelper
 import com.melihkarakilinc.notuygulamasi.ViewModel.NoteViewModel
 import com.melihkarakilinc.notuygulamasi.model.Notes
 import kotlinx.android.synthetic.main.fragment_update_note.*
@@ -34,6 +32,10 @@ class UpdateNoteFragment : Fragment() {
         view.add_update.setOnClickListener {
             update(view)
         }
+
+        view.btn_sil_update.setOnClickListener {
+            delete(view)
+        }
     }
 
     override fun onCreateView(
@@ -50,9 +52,15 @@ class UpdateNoteFragment : Fragment() {
         if (title.isNotEmpty()) {
             val note = Notes(currentNote.id, title, body)
             noteViewModel.updateData(note,view)
-            SnackBarHelper(view,"Gücelleme Başarılı!")
         } else {
             SnackBarHelper(view,"Lütfen Alanları Doldurunuz!")
         }
+    }
+
+    fun delete(view: View){
+        val title = title_et_update.text.toString().trim()
+        val body = description_et_update.text.toString().trim()
+        val note = Notes(currentNote.id, title, body)
+        noteViewModel.deleteData(note,view)
     }
 }

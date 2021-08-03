@@ -6,10 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
-import com.google.android.material.snackbar.Snackbar
 import com.melihkarakilinc.notuygulamasi.R
-import com.melihkarakilinc.notuygulamasi.SnackBarHelper
+import com.melihkarakilinc.notuygulamasi.helper.SnackBarHelper
 import com.melihkarakilinc.notuygulamasi.ViewModel.NoteViewModel
 import com.melihkarakilinc.notuygulamasi.model.Notes
 import kotlinx.android.synthetic.main.fragment_insert_note.*

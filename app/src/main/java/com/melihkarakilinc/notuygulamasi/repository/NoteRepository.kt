@@ -1,4 +1,4 @@
-package com.bersyte.noteapp.repository
+package com.melihkarakilinc.notuygulamasi.repository
 
 import androidx.lifecycle.LiveData
 import com.melihkarakilinc.notuygulamasi.model.NoteDao
@@ -12,5 +12,9 @@ class NoteRepository(private val noteDao: NoteDao) {
 
     suspend fun updateData(notes: Notes) {
         noteDao.updateData(notes)
+    }
+
+    suspend fun deleteData(notes: Notes){
+        noteDao.deleteData(notes)
     }
 }

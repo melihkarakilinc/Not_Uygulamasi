@@ -5,13 +5,10 @@ import android.view.View
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
-import com.bersyte.noteapp.repository.NoteRepository
-import com.google.android.material.snackbar.Snackbar
+import com.melihkarakilinc.notuygulamasi.repository.NoteRepository
 import com.melihkarakilinc.notuygulamasi.R
-import com.melihkarakilinc.notuygulamasi.SnackBarHelper
+import com.melihkarakilinc.notuygulamasi.helper.SnackBarHelper
 import com.melihkarakilinc.notuygulamasi.model.AppDatabase
 import com.melihkarakilinc.notuygulamasi.model.Notes
 import kotlinx.coroutines.Dispatchers
@@ -42,6 +39,14 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
             repository.updateData(notes)
         }
         SnackBarHelper(view,"Güncelleme Başarılı")
+        view.findNavController().navigate(R.id.action_updateNoteFragment_to_allNotesFragment)
+    }
+
+    fun deleteData(notes: Notes,view: View){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteData(notes)
+        }
+        SnackBarHelper(view,"Silme İşlemi Başarılı")
         view.findNavController().navigate(R.id.action_updateNoteFragment_to_allNotesFragment)
     }
 }
