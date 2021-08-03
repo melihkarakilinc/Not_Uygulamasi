@@ -38,7 +38,7 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.updateData(notes)
         }
-        SnackBarHelper(view,"Update Successful!")
+        SnackBarHelper(view,view.context.getString(R.string.guncelle))
         view.findNavController().navigate(R.id.action_updateNoteFragment_to_allNotesFragment)
     }
 
