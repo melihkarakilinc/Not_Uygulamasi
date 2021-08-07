@@ -13,7 +13,7 @@
         android:layout_margin="8dp"
         android:layout_marginStart="8dp"
         app:cardCornerRadius="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sil_update"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -33,54 +33,58 @@
                 android:hint="@string/baslik"
                 android:inputType="text"
                 android:padding="5dp"
+                android:textDirection="locale"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:textDirection="locale"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/description_et_update"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_margin="8dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:gravity="start|top"
                 android:hint="@string/icerik"
                 android:inputType="textMultiLine"
                 android:padding="5dp"
-                app:layout_constraintBottom_toTopOf="@+id/add_update"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title_et_update"
-                android:textDirection="locale"/>
-
-            <Button
-                android:id="@+id/add_update"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/guncelle"
+                android:textDirection="locale"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:backgroundTint="#e76f51"
-                android:textDirection="locale"/>
-
-            <Button
-                android:id="@+id/btn_sil_update"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/sil"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:backgroundTint="#e76f51"
-                android:textDirection="locale"/>
+                app:layout_constraintTop_toBottomOf="@+id/title_et_update" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_sil_update"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#fefae0"
+        android:text="@string/sil"
+        android:textColor="#e76f51"
+        android:textDirection="locale"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/add_update"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/add_update"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#e76f51"
+        android:text="@string/guncelle"
+        android:textDirection="locale"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_sil_update" />
 </androidx.constraintlayout.widget.ConstraintLayout>

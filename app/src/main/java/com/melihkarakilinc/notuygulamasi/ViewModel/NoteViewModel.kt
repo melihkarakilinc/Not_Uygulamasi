@@ -6,11 +6,11 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.findNavController
-import com.melihkarakilinc.notuygulamasi.repository.NoteRepository
 import com.melihkarakilinc.notuygulamasi.R
 import com.melihkarakilinc.notuygulamasi.helper.SnackBarHelper
 import com.melihkarakilinc.notuygulamasi.model.AppDatabase
 import com.melihkarakilinc.notuygulamasi.model.Notes
+import com.melihkarakilinc.notuygulamasi.repository.NoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -26,27 +26,27 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         getAllData = repository.getAllData
     }
 
-    fun insertData(notes: Notes,view: View) {
+    fun insertData(notes: Notes, view: View) {
         val launch = viewModelScope.launch(Dispatchers.IO) {
             repository.insertData(notes)
         }
-        SnackBarHelper(view,view.context.getString(R.string.ekleme_basarili))
+        SnackBarHelper(view, view.context.getString(R.string.ekleme_basarili))
         view.findNavController().navigate(R.id.action_insertNoteFragment_to_allNotesFragment)
     }
 
-    fun updateData(notes: Notes,view :View) {
+    fun updateData(notes: Notes, view: View) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.updateData(notes)
         }
-        SnackBarHelper(view,view.context.getString(R.string.guncelle))
+        SnackBarHelper(view, view.context.getString(R.string.ekleme_basarili))
         view.findNavController().navigate(R.id.action_updateNoteFragment_to_allNotesFragment)
     }
 
-    fun deleteData(notes: Notes,view: View){
+    fun deleteData(notes: Notes, view: View) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteData(notes)
         }
-        SnackBarHelper(view,view.context.getString(R.string.silme_basarili))
+        SnackBarHelper(view, view.context.getString(R.string.silme_basarili))
         view.findNavController().navigate(R.id.action_updateNoteFragment_to_allNotesFragment)
     }
 }

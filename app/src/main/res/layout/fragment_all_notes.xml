@@ -4,21 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.AllNotesFragment"
-    android:background="#fefae0">
+    android:background="#fefae0"
+    tools:context=".view.AllNotesFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_uyari"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_margin="8dp"
+        app:cardBackgroundColor="#e76f51"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:cardBackgroundColor="#e76f51">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView"
@@ -27,10 +27,10 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="@string/not_bulunmamakta"
-            android:textSize="24sp"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textDirection="locale"/>
+            android:textDirection="locale"
+            android:textSize="24sp"
+            android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -54,9 +54,9 @@
         android:backgroundTint="#e76f51"
         android:clickable="true"
         android:src="@drawable/ic_baseline_add_24"
+        android:tintMode="@color/white"
         app:backgroundTint="#FFFEFE"
         app:backgroundTintMode="add"
-        android:tintMode="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

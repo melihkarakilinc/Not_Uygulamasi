@@ -7,10 +7,9 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:padding="16dp"
-    app:cardBackgroundColor="#f2cc8f"
+    app:cardBackgroundColor="#e5e5e5"
     app:cardCornerRadius="5dp"
-    app:cardElevation="8dp"
-    android:background="@drawable/border">
+    app:cardElevation="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,10 +25,11 @@
             android:id="@+id/sTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="3dp"
             android:textColor="@color/black"
-            tools:text="Title"
             android:textDirection="locale"
-            android:padding="3dp"/>
+            android:textStyle="bold"
+            tools:text="Title" />
 
         <View
             android:id="@+id/viewColor"
@@ -42,9 +42,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:maxHeight="170dp"
-            tools:text="Description"
+            android:padding="2dp"
             android:textDirection="locale"
-            android:padding="2dp"/>
+            android:textColor="@color/black"
+            tools:text="Description" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -4,11 +4,11 @@
     <item
         android:id="@+id/en"
         android:icon="@drawable/ic_language"
-        android:title="English"/>
+        android:title="English" />
     <item
         android:id="@+id/ar"
-        android:title="العربية"/>
+        android:title="العربية" />
     <item
         android:id="@+id/tr"
-        android:title="Türkçe"/>
+        android:title="Türkçe" />
 </menu>
