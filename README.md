@@ -1,5 +1,5 @@
-# Not_Uygulamasi :notebook:
-Kotlin - Android - Not Uygulaması 
+# Not Uygulamasi :notebook:
+Kotlin  - Android - Not Uygulaması :iphone:
 ## Kullanılan Kütüphane ve Teknolojiler :
 * [Retrofit](https://square.github.io/retrofit/)
 * [Coroutine](https://developer.android.com/kotlin/coroutines)
@@ -8,40 +8,36 @@ Kotlin - Android - Not Uygulaması
 * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
 * MVVM
 
+
+## Dil ve RTL Desteği :
+### Desteklenen Diller :
+* İngilizce 
+* Türkçe
+* Arapça
+
+
 ### Ekran Görüntüleri : 
-* Not Yok (TR)
+* Not Yok (TR) (AR)
 
-<img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/tr/no_note_tr.png" width="30%" height="30%">
+<img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/tr/no_note_tr.png" width="30%" height="30%">   <img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/ar/no_not_ar.png" width="30%" height="30%">
 
-* Not Yok (AR)
 
-<img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/ar/no_not_ar.png" width="30%" height="30%">
+* Anasayfa (TR) (AR)
 
-* Anasayfa (TR)
+<img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/tr/mainpage_tr.png" width="30%" height="30%">  <img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/ar/main_page_ar.png" width="30%" height="30%">
 
-<img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/tr/mainpage_tr.png" width="30%" height="30%">
-
-* Anasayfa (AR)
-
-<img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/ar/main_page_ar.png" width="30%" height="30%">
 
 * Dil Seçimi 
 
 <img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/tr/lan_select_tr.png" width="30%" height="30%">
 
-* Ekleme İşlemi (TR)
 
-<img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/tr/add_tr.png" width="30%" height="30%">
+* Ekleme İşlemi (TR) (AR)
 
-* Ekleme İşlemi (AR)
-
-<img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/ar/note_add_ar.png" width="30%" height="30%">
+<img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/tr/add_tr.png" width="30%" height="30%"> <img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/ar/note_add_ar.png" width="30%" height="30%">
 
 
-* Güncelleme İşlemi (TR)
+* Güncelleme İşlemi (TR) (AR)
 
-<img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/tr/update_tr.png" width="30%" height="30%">
+<img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/tr/update_tr.png" width="30%" height="30%">  <img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/ar/update_ar.png" width="30%" height="30%">
 
-* Güncelleme İşlemi (AR)
-
-<img src="https://github.com/melihkarakilinc/Not_Uygulamasi/blob/master/ss/ar/update_ar.png" width="30%" height="30%">
